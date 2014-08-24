@@ -1,0 +1,26 @@
+// Copyright (c) fangguojian. All rights reserved.
+// author: fangguojian (destinydesigner@qq.com)
+// date: 2014-08-20
+// summary: intf_result.h
+#ifndef _ASSIGNMENT_TRAINS_DOMAIN_MODEL_INTF_RESULT_H_
+#define _ASSIGNMENT_TRAINS_DOMAIN_MODEL_INTF_RESULT_H_
+#include <string>
+
+namespace assignment
+{
+namespace trains
+{
+namespace domain
+{
+class IResult
+{
+  public:
+    virtual ~IResult() {}
+  public:
+    virtual const std::string toString(void) const = 0;
+};
+}
+}
+}
+
+#endif // _ASSIGNMENT_TRAINS_DOMAIN_MODEL_INTF_RESULT_H_

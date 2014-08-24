@@ -1,0 +1,49 @@
+// Copyright (c) fangguojian. All rights reserved.
+// author: fangguojian (destinydesigner@qq.com)
+// date: 2014-08-19
+// summary: longf_route.h
+#ifndef _ASSIGNMENT_TRAINS_DOMAIN_INTF_ROUTE_H_
+#define _ASSIGNMENT_TRAINS_DOMAIN_INTF_ROUTE_H_
+#include <memory>
+#include "model/intf_town.h"
+
+namespace assignment
+{
+namespace trains
+{
+namespace domain
+{
+class IRoute
+{
+  public:
+    virtual ~IRoute();
+  public:
+    virtual long getLength(void) const = 0;
+    virtual const ITown& getSrc(void) const = 0;
+    virtual const ITown& getDest() const = 0;
+};
+
+class IRouteIterator
+{
+  public:
+    virtual ~IRouteIterator() {}
+  public:
+    virtual bool hasNext(void) const = 0;
+    virtual const IRoute& next(void) const = 0;
+    virtual const IRouteIterator& first(void) const = 0;
+};
+
+class IRouteList
+{
+  public:
+    virtual ~IRouteList() {}
+  public:
+    virtual void add(const std::shared_ptr<IRoute> route);
+    virtual const IRouteIterator& getIterator(void) const;
+};
+
+}
+}
+}
+
+#endif // _ASSIGNMENT_TRAINS_DOMAIN_INTF_ROUTE_H_

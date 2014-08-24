@@ -1,0 +1,25 @@
+// Copyright (c) fangguojian. All rights reserved.
+// author: fangguojian (destinydesigner@qq.com)
+// date: 2014-08-19
+// summary: step.h
+#ifndef _ASSIGNMENT_TRAINS_DOMAIN_STEP_H_
+#define _ASSIGNMENT_TRAINS_DOMAIN_STEP_H_
+
+namespace assignment
+{
+namespace trains
+{
+namespace domain
+{
+class CStep
+{
+  public:
+    int getSrc();
+    int getDest();
+  private:
+};
+}
+}
+}
+
+#endif // _ASSIGNMENT_TRAINS_DOMAIN_STEP_H_

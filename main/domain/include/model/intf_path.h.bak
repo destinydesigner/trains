@@ -1,0 +1,29 @@
+// Copyright (c) fangguojian. All rights reserved.
+// author: fangguojian (destinydesigner@qq.com)
+// date: 2014-08-19
+// summary: intf_path.h
+#ifndef _ASSIGNMENT_TRAINS_DOMAIN_INTF_PATH_H_
+#define _ASSIGNMENT_TRAINS_DOMAIN_INTF_PATH_H_
+#include <vector>
+
+namespace assignment
+{
+namespace trains
+{
+namespace domain
+{
+class CStep;
+class IPath
+{
+  public:
+    virtual ~IPath() {}
+  public:
+    virtual int addStep(const CStep & rStep) = 0;
+    virtual bool hasNextStep() = 0;
+    virtual const CStep& nextStep() = 0;
+};
+}
+}
+}
+
+#endif // _ASSIGNMENT_TRAINS_DOMAIN_INTF_PATH_H_

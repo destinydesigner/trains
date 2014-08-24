@@ -1,0 +1,44 @@
+add(1, 2, 1)
+add(2, 3, 1)
+add(4, 5, 1)
+add(5, 6, 1)
+add(6, 7, 1)
+begin town:
+1
+2
+3
+4
+5
+6
+7
+end town:
+current: 1
+current adjacent: (1, 2, 1) 
+next: 2
+after  [1, 2] => 1
+current: 2
+current adjacent: (2, 3, 1) 
+next: 3
+after  [2, 3] => 2
+current: 3
+current adjacent: 
+noPath test====================beginbegin town:
+1
+2
+3
+4
+5
+6
+7
+end town:
+current: 1
+current adjacent: (1, 2, 1) 
+next: 2
+after  [1, 2] => 1
+current: 2
+current adjacent: (2, 3, 1) 
+next: 3
+after  [2, 3] => 2
+current: 3
+current adjacent: 
+noPath test====================end
